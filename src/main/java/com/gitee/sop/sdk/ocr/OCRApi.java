@@ -69,7 +69,7 @@ public class OCRApi {
      * @param segmentationRequestDTO
      * @return
      */
-    ResponseBean<GeneralResponseDTO> segmentationGeneral(SegmentationRequestDTO segmentationRequestDTO) {
+    public ResponseBean<GeneralResponseDTO> segmentationGeneral(SegmentationRequestDTO segmentationRequestDTO) {
         //创建请求对象
         CommonRequest<GeneralResponseDTO> request = new CommonRequest("ocrService.segmentation.general");
         request.setBizModel(segmentationRequestDTO);
@@ -84,7 +84,7 @@ public class OCRApi {
      * @param segmentationQueryDTO
      * @return
      */
-    ResponseBean<SegmentationResultResponseDTO> querySegmentationResult(SegmentationQueryDTO segmentationQueryDTO) {
+    public ResponseBean<SegmentationResultResponseDTO> querySegmentationResult(SegmentationQueryDTO segmentationQueryDTO) {
         //创建请求对象
         CommonRequest<SegmentationResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"ocrService.segmentation.query");
         request.setBizModel(segmentationQueryDTO);
@@ -99,7 +99,7 @@ public class OCRApi {
      * @param groupRequestDTO
      * @return
      */
-    ResponseBean<GeneralResponseDTO> groupGeneral(GroupRequestDTO groupRequestDTO) {
+    public ResponseBean<GeneralResponseDTO> groupGeneral(GroupRequestDTO groupRequestDTO) {
         //创建请求对象
         CommonRequest<GeneralResponseDTO> request = new CommonRequest("ocrService.group.general");
         request.setBizModel(groupRequestDTO);
@@ -114,7 +114,7 @@ public class OCRApi {
      * @param groupQueryDTO
      * @return
      */
-    ResponseBean<GroupResultResponseDTO> queryGroupResult(GroupQueryDTO groupQueryDTO) {
+    public ResponseBean<GroupResultResponseDTO> queryGroupResult(GroupQueryDTO groupQueryDTO) {
         //创建请求对象
         CommonRequest<GroupResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"ocrService.group.query");
         request.setBizModel(groupQueryDTO);
