@@ -12,9 +12,6 @@ import com.learnable.sop.sdk.ocr.response.SegmentationResultResponseDTO;
 
 
 public class OCRApi {
-    //测试环境
-//    String url = "https://api.kezhitech.com/test/router";
-    //正式环境
     String url = "https://api.kezhitech.com/router";
 
     String appId ;
