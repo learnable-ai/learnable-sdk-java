@@ -19,8 +19,8 @@ public class SdkTest extends TestCase {
     public void testocr() {
         OcrRequestDTO ocrRequestDTO = new OcrRequestDTO();
         ImageDTO imageDTO = new ImageDTO();
-        imageDTO.setUrl("https://testbank-file01.oss-cn-shanghai.aliyuncs.com/images/20201014105903_13203161.jpg");
-        ocrRequestDTO.setCallbackUrl("http://39.107.58.58:8080/admin/callback2");
+        imageDTO.setUrl("图片地址");
+        ocrRequestDTO.setCallbackUrl("回调地址");
         ocrRequestDTO.setImage(imageDTO);
         System.out.println(JSONObject.toJSONString(ocrApi.ocrGeneral(ocrRequestDTO)));
     }

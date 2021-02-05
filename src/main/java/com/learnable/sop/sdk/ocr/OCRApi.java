@@ -37,7 +37,7 @@ public class OCRApi {
      * @return
      */
     public ResponseBean<GeneralResponseDTO> ocrGeneral(OcrRequestDTO ocrRequestDTO) {
-         //创建请求对象
+        //创建请求对象
         CommonRequest<GeneralResponseDTO> request = new CommonRequest("ocrService.ocr.general");
         request.setBizModel(ocrRequestDTO);
         // 发送请求
@@ -53,7 +53,7 @@ public class OCRApi {
      */
     public ResponseBean<OCRResultResponseDTO> queryOcrResult(OcrQueryDTO ocrQueryDTO){
         //创建请求对象
-        CommonRequest<OCRResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"ocrService.ocr.query");
+        CommonRequest<OCRResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"ocrService.ocr.query.local");
         request.setBizModel(ocrQueryDTO);
         // 发送请求
         ResponseBean<OCRResultResponseDTO> baseResponse = client.execute(request);
@@ -83,7 +83,7 @@ public class OCRApi {
      */
     public ResponseBean<SegmentationResultResponseDTO> querySegmentationResult(SegmentationQueryDTO segmentationQueryDTO) {
         //创建请求对象
-        CommonRequest<SegmentationResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"ocrService.segmentation.query");
+        CommonRequest<SegmentationResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"ocrService.segmentation.query.local");
         request.setBizModel(segmentationQueryDTO);
         // 发送请求
         ResponseBean<SegmentationResultResponseDTO> baseResponse = client.execute(request);
@@ -113,7 +113,7 @@ public class OCRApi {
      */
     public ResponseBean<GroupResultResponseDTO> queryGroupResult(GroupQueryDTO groupQueryDTO) {
         //创建请求对象
-        CommonRequest<GroupResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"ocrService.group.query");
+        CommonRequest<GroupResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"ocrService.group.query.local");
         request.setBizModel(groupQueryDTO);
         // 发送请求
         ResponseBean<GroupResultResponseDTO> baseResponse = client.execute(request);
