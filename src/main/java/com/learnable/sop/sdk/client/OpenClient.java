@@ -1,7 +1,6 @@
 package com.learnable.sop.sdk.client;
 
 import com.alibaba.fastjson.JSONObject;
-import com.gitee.sop.sdk.common.*;
 import com.learnable.sop.sdk.common.*;
 import com.learnable.sop.sdk.exception.SdkException;
 import com.learnable.sop.sdk.request.BaseRequest;

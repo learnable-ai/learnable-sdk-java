@@ -3,8 +3,6 @@ package com.learnable.sop.sdk.ocr;
 import com.learnable.sop.sdk.client.OpenClient;
 import com.learnable.sop.sdk.common.RequestMethod;
 import com.learnable.sop.sdk.common.ResponseBean;
-import com.gitee.sop.sdk.ocr.request.*;
-import com.gitee.sop.sdk.ocr.response.*;
 import com.learnable.sop.sdk.request.CommonRequest;
 import com.learnable.sop.sdk.ocr.request.*;
 import com.learnable.sop.sdk.ocr.response.GeneralResponseDTO;
