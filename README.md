@@ -13,8 +13,8 @@
 client：请求相关类  
 common：基础数据类型  
 exception： 异常类  
-ocr：图片OCR识别相关业务
-grading：批阅相关业务
+ocr：图片OCR识别相关业务  
+grading：批阅相关业务  
 request：请求基础类型  
 sign：签名相关类  
 util：工具类  
