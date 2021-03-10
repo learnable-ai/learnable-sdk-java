@@ -51,4 +51,6 @@ public class GeneralResponseDTO {
 
     private Error error;
 
+    private Object content;
+
 }
