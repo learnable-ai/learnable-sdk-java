@@ -10,7 +10,7 @@ import com.learnable.sop.sdk.request.CommonRequest;
 
 
 public class GradingApi {
-    String url = "https://api.kezhitech.com/test/router";
+    String url = "https://api.kezhitech.com/router";
 
     String appId ;
     /** 开发者私钥 */
