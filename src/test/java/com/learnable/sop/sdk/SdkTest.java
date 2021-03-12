@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SdkTest extends TestCase {
-    String appId = "kz20210309818817388341362688";
+    String appId = "kz20210205807270589147381760";
 
-    String secret = "f7c20d9f9ae84be591689375280ab52a";
+    String secret = "1336f4b2494844d09a47d11eb382aaf4";
 
     OCRApi ocrApi = OCRApi.buildOCRApi(appId,secret);
 
@@ -103,7 +103,7 @@ public class SdkTest extends TestCase {
     @Test
     public void testGradingSimpleQuery() {
         GradingAnswerPageQueryDTO gradingAnswerPageQueryDTO = new GradingAnswerPageQueryDTO();
-        gradingAnswerPageQueryDTO.setGradingRecordId(84);
+        gradingAnswerPageQueryDTO.setGradingRecordId(3055);
         System.out.println(JSONObject.toJSONString(gradingApi.gradingAnswerPageQuery(gradingAnswerPageQueryDTO)));
     }
 }
