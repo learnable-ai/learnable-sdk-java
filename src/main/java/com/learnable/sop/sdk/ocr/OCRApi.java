@@ -3,12 +3,9 @@ package com.learnable.sop.sdk.ocr;
 import com.learnable.sop.sdk.client.OpenClient;
 import com.learnable.sop.sdk.common.RequestMethod;
 import com.learnable.sop.sdk.common.ResponseBean;
+import com.learnable.sop.sdk.ocr.response.*;
 import com.learnable.sop.sdk.request.CommonRequest;
 import com.learnable.sop.sdk.ocr.request.*;
-import com.learnable.sop.sdk.ocr.response.GeneralResponseDTO;
-import com.learnable.sop.sdk.ocr.response.GroupResultResponseDTO;
-import com.learnable.sop.sdk.ocr.response.OCRResultResponseDTO;
-import com.learnable.sop.sdk.ocr.response.SegmentationResultResponseDTO;
 
 
 public class OCRApi {
@@ -117,6 +114,21 @@ public class OCRApi {
         request.setBizModel(groupQueryDTO);
         // 发送请求
         ResponseBean<GroupResultResponseDTO> baseResponse = client.execute(request);
+
+        return baseResponse;
+    }
+
+    /**
+     * 题目结构化
+     * @param questionGroupRequest
+     * @return
+     */
+    public ResponseBean<QuestionGroupResponse> questionGroup(QuestionGroupRequest questionGroupRequest) {
+        //创建请求对象
+        CommonRequest<GeneralResponseDTO> request = new CommonRequest("ocrService.questionGroup.asyc");
+        request.setBizModel(questionGroupRequest);
+        // 发送请求
+        ResponseBean<QuestionGroupResponse> baseResponse = client.execute(request);
 
         return baseResponse;
     }
