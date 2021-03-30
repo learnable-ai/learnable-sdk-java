@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author tanghc
+ * @author lcl
  */
 public class ClassUtil {
 

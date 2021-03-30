@@ -6,6 +6,9 @@ import com.learnable.sop.sdk.common.ResponseBean;
 import com.learnable.sop.sdk.ocr.response.*;
 import com.learnable.sop.sdk.request.CommonRequest;
 import com.learnable.sop.sdk.ocr.request.*;
+import com.learnable.sop.sdk.util.FileUtil;
+
+import java.io.File;
 
 
 public class OCRApi {
@@ -129,6 +132,10 @@ public class OCRApi {
         request.setBizModel(questionGroupRequest);
         // 发送请求
         ResponseBean<QuestionGroupResponse> baseResponse = client.execute(request);
+
+        //此外，提供了根据坐标获取base64的工具类
+        //FileUtil.cutImage(questionGroupRequest.getImageUrl(),1,1,1,1);
+        //FileUtil.cutImageFromBase64(questionGroupRequest.getImageData(),1,1,1,1);
 
         return baseResponse;
     }

@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 
 /**
  * MD5工具类
- * @author tanghc
+ * @author lcl
  */
 public class MD5Util {
 
