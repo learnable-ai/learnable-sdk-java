@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @NoArgsConstructor
 @AllArgsConstructor
@@ -45,5 +44,15 @@ public class ImageDTO implements Serializable {
     //图片质量0: 扫描、截图 1: 手持拍摄
     private Integer quality = 0;
 
+    public Integer getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Integer subject) {
+        this.subject = subject;
+    }
+
+    //科目 1: 数学 2: 物理 3: 化学 4: 英语 5: 语文
+    private Integer subject = 1;
 
 }
