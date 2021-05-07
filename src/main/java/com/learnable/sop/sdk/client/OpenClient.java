@@ -191,13 +191,13 @@ public class OpenClient {
 
         String resp = doExecute(this.url, requestForm, Collections.emptyMap());
 //        if (log.isDebugEnabled()) {
-            log.debug("----------- 请求信息 -----------"
-                    + "\n请求参数：" + SopSignature.getSignContent(form)
-                    + "\n待签名内容：" + content
-                    + "\n签名(sign)：" + sign
-                    + "\n----------- 返回结果 -----------"
-                    + "\n" + resp
-            );
+//            log.error("----------- 请求信息 -----------"
+//                    + "\n请求参数：" + SopSignature.getSignContent(form)
+//                    + "\n待签名内容：" + content
+//                    + "\n签名(sign)：" + sign
+//                    + "\n----------- 返回结果 -----------"
+//                    + "\n" + resp
+//            );
 //        }
         return JSONObject.parseObject(resp,ResponseBean.class);
     }

@@ -11,7 +11,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class QuestionGroupRequest implements Serializable {
+public class ExamPaperRequestDTO implements Serializable {
     String imageUrl;
     String imageData;
     Integer subject = 1;

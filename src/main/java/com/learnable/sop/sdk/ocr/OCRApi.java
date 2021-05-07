@@ -6,13 +6,10 @@ import com.learnable.sop.sdk.common.ResponseBean;
 import com.learnable.sop.sdk.ocr.response.*;
 import com.learnable.sop.sdk.request.CommonRequest;
 import com.learnable.sop.sdk.ocr.request.*;
-import com.learnable.sop.sdk.util.FileUtil;
-
-import java.io.File;
 
 
 public class OCRApi {
-    String url = "https://api.kezhitech.com/router";
+    String url = "http://39.102.147.121:8081/";
 
     String appId ;
     /** 开发者私钥 */
@@ -140,4 +137,22 @@ public class OCRApi {
         return baseResponse;
     }
 
+    /**
+     * 试卷拆分
+     * @param examPaperRequestDTO
+     * @return
+     */
+    public ResponseBean<ExamPaperResponseDTO> examPaper(ExamPaperRequestDTO examPaperRequestDTO) {
+        //创建请求对象
+        CommonRequest<GeneralResponseDTO> request = new CommonRequest("ocrService.examPaper.asyc");
+        request.setBizModel(examPaperRequestDTO);
+        // 发送请求
+        ResponseBean<ExamPaperResponseDTO> baseResponse = client.execute(request);
+
+        //此外，提供了根据坐标获取base64的工具类
+        //FileUtil.cutImage(questionGroupRequest.getImageUrl(),1,1,1,1);
+        //FileUtil.cutImageFromBase64(questionGroupRequest.getImageData(),1,1,1,1);
+
+        return baseResponse;
+    }
 }

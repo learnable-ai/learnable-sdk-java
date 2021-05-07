@@ -5,10 +5,7 @@ import com.learnable.sop.sdk.grading.GradingApi;
 import com.learnable.sop.sdk.grading.request.*;
 import com.learnable.sop.sdk.ocr.OCRApi;
 import com.learnable.sop.sdk.ocr.common.ImageDTO;
-import com.learnable.sop.sdk.ocr.request.OcrQueryDTO;
-import com.learnable.sop.sdk.ocr.request.OcrRequestDTO;
-import com.learnable.sop.sdk.ocr.request.QuestionGroupRequest;
-import com.learnable.sop.sdk.ocr.request.SegmentationQueryDTO;
+import com.learnable.sop.sdk.ocr.request.*;
 import junit.framework.TestCase;
 import org.junit.Test;
 
@@ -16,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SdkTest extends TestCase {
-    String appId = "kz***";   //控制台获取appId
+    String appId = "kz20210302816314123787698176";   //控制台获取appId
 
-    String secret = "1336f4b2494844d09a37d11eb382aaf4";  //控制台获取secret
+    String secret = "7d7d11e59de844c08fb59226200e844c";  //控制台获取secret
 
     OCRApi ocrApi = OCRApi.buildOCRApi(appId,secret);
 
@@ -116,5 +113,14 @@ public class SdkTest extends TestCase {
         QuestionGroupRequest questionGroupRequest = new QuestionGroupRequest();
         questionGroupRequest.setImageUrl("https://tag-exam-prod.oss-cn-beijing.aliyuncs.com/005c6b13282c4e5c9795cbcdae888f65.jpg");
         System.out.println(JSONObject.toJSONString(ocrApi.questionGroup(questionGroupRequest)));
+    }
+
+
+
+    @Test
+    public void testExamPaper() {
+        ExamPaperRequestDTO examPaperRequestDTO = new ExamPaperRequestDTO();
+        examPaperRequestDTO.setImageUrl("https://tag-exam-prod.oss-cn-beijing.aliyuncs.com/005c6b13282c4e5c9795cbcdae888f65.jpg");
+        System.out.println(JSONObject.toJSONString(ocrApi.examPaper(examPaperRequestDTO)));
     }
 }
