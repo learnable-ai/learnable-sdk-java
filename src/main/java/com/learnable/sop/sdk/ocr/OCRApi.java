@@ -9,7 +9,7 @@ import com.learnable.sop.sdk.ocr.request.*;
 
 
 public class OCRApi {
-    String url = "http://39.102.147.121:8081/";
+    String url = "https://api.kezhitech.com/router";
 
     String appId ;
     /** 开发者私钥 */
@@ -138,7 +138,7 @@ public class OCRApi {
     }
 
     /**
-     * 试卷拆分
+     * 试卷识别
      * @param examPaperRequestDTO
      * @return
      */

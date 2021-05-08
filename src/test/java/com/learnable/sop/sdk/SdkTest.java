@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SdkTest extends TestCase {
-    String appId = "kz20210302816314123787698176";   //控制台获取appId
+    String appId = "kz***";   //控制台获取appId
 
-    String secret = "7d7d11e59de844c08fb59226200e844c";  //控制台获取secret
+    String secret = "1336f4b2494844d09a37d11eb382aaf4";  //控制台获取secret
 
     OCRApi ocrApi = OCRApi.buildOCRApi(appId,secret);
 
@@ -117,6 +117,9 @@ public class SdkTest extends TestCase {
 
 
 
+    /**
+     * 试卷识别调用demo
+     */
     @Test
     public void testExamPaper() {
         ExamPaperRequestDTO examPaperRequestDTO = new ExamPaperRequestDTO();
