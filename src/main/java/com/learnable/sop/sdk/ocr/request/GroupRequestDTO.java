@@ -31,5 +31,8 @@ public class GroupRequestDTO {
     private ImageDTO image;
     //识别结果的回调地址
     private String callbackUrl;
+    //练习册id
+    private String exerciseBookId;
+
 
 }

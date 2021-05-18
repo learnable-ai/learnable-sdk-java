@@ -1,8 +1,10 @@
 package com.learnable.sop.sdk;
 
 import com.alibaba.fastjson.JSONObject;
+import com.learnable.sop.sdk.common.ResponseBean;
 import com.learnable.sop.sdk.grading.GradingApi;
 import com.learnable.sop.sdk.grading.request.*;
+import com.learnable.sop.sdk.grading.response.SimplePageReviewResponseDTO;
 import com.learnable.sop.sdk.ocr.OCRApi;
 import com.learnable.sop.sdk.ocr.common.ImageDTO;
 import com.learnable.sop.sdk.ocr.request.*;
@@ -126,4 +128,22 @@ public class SdkTest extends TestCase {
         examPaperRequestDTO.setImageUrl("https://tag-exam-prod.oss-cn-beijing.aliyuncs.com/005c6b13282c4e5c9795cbcdae888f65.jpg");
         System.out.println(JSONObject.toJSONString(ocrApi.examPaper(examPaperRequestDTO)));
     }
+
+    @Test
+    public void testSimplePageReview() {
+        SimplePageReviewRequestDTO simplePageReviewRequestDTO = new SimplePageReviewRequestDTO();
+        simplePageReviewRequestDTO.setImageUrl("https://xgs2019test.oss-cn-beijing.aliyuncs.com/120_1620980684581_1875.jfif");
+        simplePageReviewRequestDTO.setBookUniqueId("44");
+        ResponseBean<SimplePageReviewResponseDTO> simplePageReviewResponseDTO = gradingApi.simplePageReview(simplePageReviewRequestDTO);
+        System.out.println(JSONObject.toJSONString(simplePageReviewResponseDTO));
+
+    }
+    @Test
+    public void testSimplePageReviewQuery() {
+        SimplePageReviewQueryRequestDTO simplePageReviewQueryRequestDTO = new SimplePageReviewQueryRequestDTO();
+        simplePageReviewQueryRequestDTO.setPageReviewId(157299725369345L);
+        System.out.println(JSONObject.toJSONString(gradingApi.simplePageReviewQuery(simplePageReviewQueryRequestDTO)));
+
+    }
+
 }
