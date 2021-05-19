@@ -11,4 +11,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SimplePageReviewResponseDTO {
     Long pageReviewId;
+
+    public Long getPageReviewId() {
+        return pageReviewId;
+    }
+
+    public void setPageReviewId(Long pageReviewId) {
+        this.pageReviewId = pageReviewId;
+    }
 }

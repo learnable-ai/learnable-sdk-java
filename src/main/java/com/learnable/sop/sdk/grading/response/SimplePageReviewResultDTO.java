@@ -19,9 +19,6 @@ public class SimplePageReviewResultDTO implements Serializable {
      */
     private Long pageReviewId;
 
-    /**
-     * @see com.learnable.review.enums.ReviewStatusEnum
-     */
     private Integer status;
 
     /**
@@ -33,4 +30,36 @@ public class SimplePageReviewResultDTO implements Serializable {
      * 批阅结果
      */
     List<SimpleQuestionReviewResultDTO> result;
+
+    public Long getPageReviewId() {
+        return pageReviewId;
+    }
+
+    public void setPageReviewId(Long pageReviewId) {
+        this.pageReviewId = pageReviewId;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Integer getExceptionCode() {
+        return exceptionCode;
+    }
+
+    public void setExceptionCode(Integer exceptionCode) {
+        this.exceptionCode = exceptionCode;
+    }
+
+    public List<SimpleQuestionReviewResultDTO> getResult() {
+        return result;
+    }
+
+    public void setResult(List<SimpleQuestionReviewResultDTO> result) {
+        this.result = result;
+    }
 }

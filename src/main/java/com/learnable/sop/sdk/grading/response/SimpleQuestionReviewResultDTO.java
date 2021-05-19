@@ -33,4 +33,36 @@ public class SimpleQuestionReviewResultDTO implements Serializable {
      * 异常情况(单题)
      */
     private Integer exceptionCode;
+
+    public BoundingBoxDTO getBoundingBoxDTO() {
+        return boundingBoxDTO;
+    }
+
+    public void setBoundingBoxDTO(BoundingBoxDTO boundingBoxDTO) {
+        this.boundingBoxDTO = boundingBoxDTO;
+    }
+
+    public String getQuestionNo() {
+        return questionNo;
+    }
+
+    public void setQuestionNo(String questionNo) {
+        this.questionNo = questionNo;
+    }
+
+    public Integer getAnswerValidity() {
+        return answerValidity;
+    }
+
+    public void setAnswerValidity(Integer answerValidity) {
+        this.answerValidity = answerValidity;
+    }
+
+    public Integer getExceptionCode() {
+        return exceptionCode;
+    }
+
+    public void setExceptionCode(Integer exceptionCode) {
+        this.exceptionCode = exceptionCode;
+    }
 }
