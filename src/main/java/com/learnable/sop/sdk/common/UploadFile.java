@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 /**
  * 文件上传类
- * @author tanghc
+ * @author 
  */
 @Getter
 @Setter
