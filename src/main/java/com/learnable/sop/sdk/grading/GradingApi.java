@@ -10,8 +10,8 @@ import com.learnable.sop.sdk.request.CommonRequest;
 
 
 public class GradingApi {
-//    String url = "https://api.kezhitech.com/router";   //prod
-    String url = "http://39.102.147.245:8081";   //dev
+    String url = "https://api.kezhitech.com/router";   //prod
+//    String url = "http://39.102.147.245:8081";   //dev
 
     String appId ;
     /** 开发者私钥 */
