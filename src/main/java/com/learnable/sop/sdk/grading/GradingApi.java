@@ -3,18 +3,15 @@ package com.learnable.sop.sdk.grading;
 import com.learnable.sop.sdk.client.OpenClient;
 import com.learnable.sop.sdk.common.RequestMethod;
 import com.learnable.sop.sdk.common.ResponseBean;
-import com.learnable.sop.sdk.grading.request.AnswerPageRequestDTO;
-import com.learnable.sop.sdk.grading.request.GradingAnswerPageQueryDTO;
-import com.learnable.sop.sdk.grading.request.SimplePageReviewQueryRequestDTO;
-import com.learnable.sop.sdk.grading.request.SimplePageReviewRequestDTO;
-import com.learnable.sop.sdk.grading.response.GradingAnswerPageResponseDTO;
-import com.learnable.sop.sdk.grading.response.SimplePageReviewResponseDTO;
+import com.learnable.sop.sdk.grading.request.*;
+import com.learnable.sop.sdk.grading.response.*;
 import com.learnable.sop.sdk.ocr.response.GeneralResponseDTO;
 import com.learnable.sop.sdk.request.CommonRequest;
 
 
 public class GradingApi {
-    String url = "https://api.kezhitech.com/router";
+//    String url = "https://api.kezhitech.com/router";   //prod
+    String url = "http://39.102.147.245:8081";   //dev
 
     String appId ;
     /** 开发者私钥 */
@@ -82,4 +79,43 @@ public class GradingApi {
         return baseResponse;
     }
 
+    /**
+     * 提交作业批阅
+     * @param homeworkSubmitRequestDTO
+     * @return
+     */
+    public ResponseBean homeworkSubmit(HomeworkSubmitRequestDTO homeworkSubmitRequestDTO){
+        CommonRequest request = new CommonRequest("grading.homework.batchSubmit");
+        request.setBizModel(homeworkSubmitRequestDTO);
+        // 发送请求
+        ResponseBean baseResponse = client.execute(request);
+        return baseResponse;
+    }
+
+    /**
+     * 查询作业批改状态
+     * @param homeworkStatusRequestDTO
+     * @return
+     */
+    public ResponseBean<HomeworkResultResponseDTO> queryHomeworkResult(HomeworkStatusRequestDTO homeworkStatusRequestDTO){
+        CommonRequest<HomeworkResultResponseDTO> request = new CommonRequest(RequestMethod.GET,"grading.homework.status");
+        request.setBizModel(homeworkStatusRequestDTO);
+        // 发送请求
+        ResponseBean<HomeworkResultResponseDTO> baseResponse = client.execute(request);
+
+        return baseResponse;
+    }
+
+    /**
+     * 根据教师id查询作业列表
+     * @param homeworkRecordQueryDTO
+     * @return
+     */
+    public ResponseBean<PageInfo<HomeworkRecordResponseDTO>> queryHomewordRecord(HomeworkRecordQueryDTO homeworkRecordQueryDTO){
+        CommonRequest<PageInfo<HomeworkRecordResponseDTO>> request = new CommonRequest(RequestMethod.GET,"grading.findHomeworkByTeacherId");
+        request.setBizModel(homeworkRecordQueryDTO);
+        // 发送请求
+        ResponseBean<PageInfo<HomeworkRecordResponseDTO>> baseResponse = client.execute(request);
+        return baseResponse;
+    }
 }

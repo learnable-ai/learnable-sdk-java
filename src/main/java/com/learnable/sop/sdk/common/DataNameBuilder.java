@@ -1,7 +1,7 @@
 package com.learnable.sop.sdk.common;
 
 /**
- * @author tanghc
+ * @author
  */
 public interface DataNameBuilder {
     /**

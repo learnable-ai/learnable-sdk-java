@@ -11,7 +11,7 @@ package com.learnable.sop.sdk.common;
  *     },
  *     "sign": "ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE"
  * }
- * @author tanghc
+ * @author
  */
 public class CustomDataNameBuilder implements DataNameBuilder {
     private String dataName = "result";

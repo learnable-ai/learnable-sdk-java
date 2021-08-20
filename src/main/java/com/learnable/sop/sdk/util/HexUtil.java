@@ -2,7 +2,7 @@ package com.learnable.sop.sdk.util;
 
 /**
  * hex工具类
- * @author tanghc
+ * @author
  */
 public class HexUtil {
     private static final String ZERO = "0";

@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 /**
- * @author tanghc
+ * @author
  */
 public class TaobaoSignature {
 

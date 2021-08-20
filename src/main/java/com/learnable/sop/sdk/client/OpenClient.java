@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * 请求客户端，申明一个即可
  *
- * @author tanghc
+ * @author
  */
 public class OpenClient {
     private static final Log log = LogFactory.getLog(OpenClient.class);

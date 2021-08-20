@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * 负责请求操作
  *
- * @author tanghc
+ * @author
  */
 public class OpenRequest {
 

@@ -3,7 +3,7 @@ package com.learnable.sop.sdk.request;
 import com.learnable.sop.sdk.common.RequestMethod;
 
 /**
- * @author tanghc
+ * @author
  */
 public class CommonRequest<T> extends BaseRequest{
 

@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * HTTP请求工具
  *
- * @author tanghc
+ * @author
  */
 public class OpenHttp {
     private static final MediaType MEDIA_TYPE_JSON = MediaType.parse("application/json; charset=utf-8");

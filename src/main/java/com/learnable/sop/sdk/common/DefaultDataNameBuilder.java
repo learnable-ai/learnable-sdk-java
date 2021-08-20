@@ -14,7 +14,7 @@ package com.learnable.sop.sdk.common;
  *     "sign": "ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE"
  * }
  * </pre>
- * @author tanghc
+ * @author
  */
 public class DefaultDataNameBuilder implements DataNameBuilder {
     private static final char DOT = '.';

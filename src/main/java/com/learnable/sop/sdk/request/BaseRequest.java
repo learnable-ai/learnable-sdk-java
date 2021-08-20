@@ -30,7 +30,7 @@ import java.util.Map;
  *
  * @param <T> 对应的Response对象
  *
- * @author tanghc
+ * @author
  */
 public abstract class BaseRequest<T> {
 

@@ -3,7 +3,7 @@ package com.learnable.sop.sdk.common;
 import lombok.Data;
 
 /**
- * @author tanghc
+ * @author
  */
 @Data
 public class OpenConfig {

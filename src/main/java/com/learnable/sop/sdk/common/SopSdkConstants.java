@@ -1,7 +1,7 @@
 package com.learnable.sop.sdk.common;
 
 /**
- * @author tanghc
+ * @author
  */
 public class SopSdkConstants {
     public static String DATA_SUFFIX = "_response";
