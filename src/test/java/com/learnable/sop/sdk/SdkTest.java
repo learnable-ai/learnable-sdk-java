@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SdkTest extends TestCase {
-    String appId = "kz***";   //控制台获取appId
+    String appId = "kz20210820878283106723823616";   //控制台获取appId
 
-    String secret = "1336f4b2494844d09a37d11eb382aaf4";  //控制台获取secret
+    String secret = "ed0cc0145f6a4ba195e11f73f4d467b6";  //控制台获取secret
 
     OCRApi ocrApi = OCRApi.buildOCRApi(appId,secret);
 
@@ -146,4 +146,39 @@ public class SdkTest extends TestCase {
 
     }
 
+    /**
+     * 作业批量提交
+     */
+    @Test
+    public void  testHomeworkSubmit(){
+        HomeworkSubmitRequestDTO homeworkSubmitRequestDTO = new HomeworkSubmitRequestDTO();
+        homeworkSubmitRequestDTO.setTaskId(112);
+        List<String> imageList = new ArrayList<>();
+        imageList.add("url1");
+        imageList.add("url2");
+        homeworkSubmitRequestDTO.setImageList(imageList);
+        System.out.println(JSONObject.toJSONString(gradingApi.homeworkSubmit(homeworkSubmitRequestDTO)));
+    }
+
+    /**
+     * 查询作业批改状态
+     */
+    @Test
+    public void testQueryHomeworkResult(){
+        HomeworkStatusRequestDTO homeworkStatusRequestDTO = new HomeworkStatusRequestDTO();
+        homeworkStatusRequestDTO.setTaskId(112);
+        System.out.println(JSONObject.toJSONString(gradingApi.queryHomeworkResult(homeworkStatusRequestDTO)));
+    }
+
+    /**
+     * 根据教师id查询作业列表
+     */
+    @Test
+    public void testQueryHomewordRecord(){
+        HomeworkRecordQueryDTO homeworkRecordQueryDTO = new HomeworkRecordQueryDTO();
+        homeworkRecordQueryDTO.setTeacherId(111);
+        homeworkRecordQueryDTO.setPageNo(1);
+        homeworkRecordQueryDTO.setPageSize(20);
+        System.out.println(JSONObject.toJSONString(gradingApi.queryHomewordRecord(homeworkRecordQueryDTO)));
+    }
 }
